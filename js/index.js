@@ -25,10 +25,17 @@ function navEventHandler() {
   let navitems = document.getElementsByClassName("nav-button");
 
   for(var element of navitems){
-    element.addEventListener('click', function(event){
-      setActive(navitems, this.innerText);
-      document.getElementById("frame").src = this.innerText + ".html";
-    });
+    if (element.id == "toggle") {
+      element.addEventListener('click', function(movidas){
+
+      });
+    }
+    else {
+      element.addEventListener('click', function(event){
+        setActive(navitems, this.innerText);
+        document.getElementById("frame").src = this.innerText + ".html";
+      });
+    }
   }
 }
 
